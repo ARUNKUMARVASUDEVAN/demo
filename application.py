@@ -23,7 +23,8 @@ def keyword_extraction(texts):
       output = ' '.join(underlined_words)
   return output
 from flask import Flask, request, jsonify
-app = Flask(__name__)
+application = Flask(__name__)
+app=application
 @app.route('/key', methods=['POST'])
 def keyword():
     try:
